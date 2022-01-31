@@ -5,6 +5,7 @@ function queryFactory(element) {
 const btnGenerate = queryFactory("#btnGenerate");
 const hashResult = queryFactory("#hashResult");
 const btnClipboard = queryFactory("#btnClipboard");
+const DEFAULT_STRING = "Click in the button to generate your hash!";
 
 const token =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*{}[]()=";
@@ -22,8 +23,11 @@ function randomizeToken(length) {
 
 async function copyToClipboard() {
   try {
+    if (hashResult.innerHTML === DEFAULT_STRING) {
+      alert("Please generate your hash first.");
+    }
     await navigator.clipboard.writeText(randomizeToken(MAX_LENGTH));
-    alert("Copied to clipboard successfully");
+    alert("Copied to clipboard successfully.");
   } catch (e) {
     console.log(e);
   }
@@ -35,6 +39,7 @@ function execute() {
   });
   btnClipboard.addEventListener("click", (e) => {
     copyToClipboard();
+    hashResult.innerHTML = randomizeToken(MAX_LENGTH);
   });
 }
 
