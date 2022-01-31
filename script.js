@@ -23,7 +23,7 @@ function randomizeToken(length) {
 async function copyToClipboard() {
   try {
     await navigator.clipboard.writeText(randomizeToken(MAX_LENGTH));
-    alert("copiado para a area de transferencia com sucesso");
+    alert("Copied to clipboard successfully");
   } catch (e) {
     console.log(e);
   }
