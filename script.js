@@ -39,7 +39,6 @@ function execute() {
   });
   btnClipboard.addEventListener("click", (e) => {
     copyToClipboard();
-    hashResult.innerHTML = randomizeToken(MAX_LENGTH);
   });
 }
 

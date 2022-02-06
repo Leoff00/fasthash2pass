@@ -4,28 +4,96 @@
   font-family: Lato;
 }
 
-.container {
-  margin: auto;
+body {
+  background-color: #d4d4d4;
+}
+
+main {
   display: flex;
+  width: 100vw;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 16px;
 }
 
+.textContainer {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.5px);
+  -webkit-backdrop-filter: blur(3.5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-direction: column;
+}
+
 #btnGenerate {
-  width: 100%;
-  font-size: 32px;
-  padding: 16px;
-  background-color: #c3c5c1;
-  outline: none;
+  background-color: #0a6bff;
+  border-radius: 4px;
+  border: 0;
+  box-shadow: rgba(1, 60, 136, 0.5) 0 -1px 3px 0 inset,
+    rgba(0, 44, 97, 0.1) 0 3px 6px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inherit;
+  font-family: "Space Grotesk", -apple-system, system-ui, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+  min-height: 56px;
+  min-width: 120px;
+  padding: 16px 20px;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  transition: all 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .result {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 24px;
+}
+
+#btnClipboard {
+  align-items: center;
+  appearance: button;
+  background-color: #0276ff;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "RM Neue", sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  padding: 10px 21px;
+  text-align: center;
+  text-transform: none;
+  transition: color 0.13s ease-in-out, background 0.13s ease-in-out,
+    opacity 0.13s ease-in-out, box-shadow 0.13s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .result > button {
@@ -59,12 +127,32 @@ footer > p {
   font-weight: 400;
 }
 
-#btnGenerate:active {
-  background-color: #797979;
-  font-size: 30px;
-  border: 1px solid black;
-}
-
 .result > button > img:active {
   background-color: #777777;
+}
+
+#btnGenerate:hover {
+  background-color: #065dd8;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  #btnGenerate {
+    padding: 16px 44px;
+    min-width: 150px;
+  }
+}
+
+#btnGenerate:active {
+  font-size: 24px;
+  outline: none;
+  border: none;
+}
+
+#btnClipboard:active {
+  background-color: #006ae8;
+}
+
+#btnClipboard:hover {
+  background-color: #1c84ff;
 }
