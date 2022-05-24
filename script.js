@@ -25,9 +25,11 @@ async function copyToClipboard() {
   try {
     if (hashResult.innerHTML === DEFAULT_STRING) {
       alert("Please generate your hash first.");
+      return;
     }
     await navigator.clipboard.writeText(randomizeToken(MAX_LENGTH));
     alert("Copied to clipboard successfully.");
+    return;
   } catch (e) {
     console.log(e);
   }
