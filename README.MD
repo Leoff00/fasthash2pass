@@ -2,6 +2,8 @@
 
 ## My custom password generator to use in day-to-day.
 
+## Test here 👉 https://fasthash2pass.netlify.app
+
 #
 
 > ###  This will be used to help me and people to generate fast random tokens and password controlled by your own range.
